@@ -1,17 +1,20 @@
-//Mudança de valores
-const ids = ["ageChris", "ageDennis", "ageSarah", "idade_karen"]; //
+//Declaração das variaveis
 const idades = [19, 21, 30, 20];
 let soma = 0;
 
-for (let i = 0; i < ids.length; i++) {
-    let elementos = document.getElementById(ids[i]);
-    elementos.textContent = idades[i];
-    console.log(elementos)
-    soma += idades[i];
-}
+//Captura dos ages
+let classes = document.querySelectorAll('.age'); //Captura todos as class age 
+
+//Adição dos novos valores em cada posição
+classes.forEach((elementoAtual, indice) => {  //Faz com que a cada execução (executa o script em cada posição)
+    elementoAtual.textContent = idades[indice]; //O conteudo atual do classes altera 'texto' no HTML para o valor do vetor idades na posição que está o age
+    console.log(elementoAtual);
+    soma += idades[indice]; //Acumulador do vetor idades na posição que o age está
+    console.log(soma);
+});
 
 //Média
-let media = (soma / ids.length).toFixed(2);
+let media = (soma /classes.length).toFixed(2);
 let lugarMed = document.getElementById("mediaCalculada");
 lugarMed.textContent = media;
 
@@ -30,7 +33,7 @@ PhotoSpace.forEach((conteudoAtual, positionAtual) => {
         let image = document.createElement('img'); //adiciona a tag 'img'
         image.src = Photos[positionAtual]; // Atribui uma imagem diferente para cada elemento
         conteudoAtual.appendChild(image); // Adiciona a imagem ao elemento
-    }
+    };
 })
 
 
