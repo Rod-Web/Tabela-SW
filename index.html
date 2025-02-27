@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Seletores</title>
+</head>
+<body>
+      <table>
+        <caption class="titulo">
+          Front-end web developer course 2021
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Images</th>
+            <th scope="col">Person</th>
+            <th scope="col">Most interest in</th>
+            <th scope="col">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="photos"></th>
+            <th scope="row">Chris</th>
+            <td>HTML tables</td>
+            <td class="age" id="ageChris">22</td>
+          </tr>
+          <tr>
+            <th id="photos"></th>
+            <th scope="row">Dennis</th>
+            <td>Web accessibility</td>
+            <td class="age" id="ageDennis">45</td>
+          </tr>
+          <tr>
+            <th id="photos"></th>
+            <th scope="row">Sarah</th>
+            <td>JavaScript frameworks</td>
+            <td class="age" id="ageSarah">29</td>
+          </tr>
+          <tr>
+            <th id="photos"></th>
+            <th scope="row">Karen</th>
+            <td>Web performance</td>
+            <td class="age" id="idade_karen">38</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="3">Average age</th>
+            <td id="mediaCalculada"></td>
+          </tr>
+        </tfoot>
+      </table>
+      <script type="module" src="./index.js"></script>
+</body>
+</html>
